@@ -25,15 +25,15 @@ while true; do
   read -rp "Ingresa el número de tu opción: " opcion
 
   case $opcion in
-    1) bash ./listar_procesos_todos.sh ;;
-    2) bash ./ver_detalles_proceso.sh ;;
-    3) bash ./terminar_proceso_suave.sh ;;
-    4) bash ./terminar_proceso_forzado.sh ;;
-    5) bash ./suspender_proceso.sh ;;
-    6) bash ./reanudar_proceso.sh ;;
-    7) bash ./cambiar_prioridad_proceso.sh ;;
-    8) bash ./abrir_monitor_procesos.sh ;;
-    9) bash ./main_toolkit.sh ;;
+    1) ./modulos/procesos/listar_procesos_todos.sh ;;
+    2) ./modulos/procesos/ver_detalles_proceso.sh ;;
+    3) ./modulos/procesos/terminar_proceso_suave.sh ;;
+    4) ./modulos/procesos/terminar_proceso_forzado.sh ;;
+    5) ./modulos/procesos/suspender_proceso.sh ;;
+    6) ./modulos/procesos/reanudar_proceso.sh ;;
+    7) ./modulos/procesos/cambiar_prioridad_proceso.sh ;;
+    8) ./modulos/procesos/abrir_monitor_procesos.sh ;;
+    9) break ;;
     *) echo -e "${RED}Opción inválida. Intenta nuevamente.${NC}"; sleep 2 ;;
   esac
 done
