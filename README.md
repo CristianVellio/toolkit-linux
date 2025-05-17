@@ -3,6 +3,7 @@ Sistemas Operativosss
 
 🧩 Scripts del Toolkit
 📄 abrir_monitor_procesos.sh
+
 Este script se encarga de abrir una herramienta de monitoreo de procesos del sistema. Verifica si htop está instalado; si lo está, lo ejecuta. Si no, recurre al comando top.
 
 🔍 Funcionamiento:
