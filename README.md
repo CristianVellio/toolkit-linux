@@ -205,3 +205,4 @@ Para ejecutar correctamente el Toolkit, se requiere lo siguiente:
 **Convertir archivos si es necesario:**
   ```bash
 dos2unix *.sh
+
