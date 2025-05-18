@@ -22,17 +22,17 @@ Al ejecutar la opción correspondiente en el menú, el script pedirá al usuario
 
 Una vez que el usuario introduce el PID y presiona Enter, el script utiliza el comando ps -p <PID> -o pid,user,pcpu,pmem,vsz,rss,tty,stat,start,time,command para mostrar información relevante del proceso. Esta información incluye:
 
-PID: El identificador único del proceso.
-USER: El usuario propietario del proceso.
-%CPU: El porcentaje de uso de la CPU por el proceso.
-%MEM: El porcentaje de uso de la memoria RAM por el proceso.
-VSZ: El tamaño virtual de la imagen del proceso.
-RSS: El tamaño del conjunto residente (la porción de la memoria que realmente ocupa el proceso en la RAM).
-TTY: El terminal asociado al proceso (si existe).
-STAT: El estado actual del proceso (ej: S para sleeping, R para running).
-START: La hora o fecha en que se inició el proceso.
-TIME: La cantidad total de tiempo de CPU que el proceso ha utilizado.
-COMMAND: El comando que se ejecutó para iniciar el proceso.
+- PID: El identificador único del proceso.
+- USER: El usuario propietario del proceso.
+- %CPU: El porcentaje de uso de la CPU por el proceso.
+- %MEM: El porcentaje de uso de la memoria RAM por el proceso.
+- VSZ: El tamaño virtual de la imagen del proceso.
+- RSS: El tamaño del conjunto residente (la porción de la memoria que realmente ocupa el proceso en la RAM).
+- TTY: El terminal asociado al proceso (si existe).
+- STAT: El estado actual del proceso (ej: S para sleeping, R para running).
+- START: La hora o fecha en que se inició el proceso.
+- TIME: La cantidad total de tiempo de CPU que el proceso ha utilizado.
+- COMMAND: El comando que se ejecutó para iniciar el proceso.
 
 Si el PID ingresado no corresponde a ningún proceso activo en el sistema, el script mostrará un mensaje indicando que no se encontró ningún proceso con ese PID.
 
