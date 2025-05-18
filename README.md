@@ -127,6 +127,16 @@ Este script implementa la función de suspender un proceso temporalmente.
 
 - Este archivo es parte del módulo de procesos, ubicado típicamente en (<code>modulos/procesos/</code>).
 
+### 📄 reanudar_proceso.sh 💤
+🔍 Funcionamiento:
 
+- Esta función permite reanudar un proceso que ha sido pausado o suspendido.
+ 
+- Solicita al usuario que ingrese el PID (identificador del proceso) y pide confirmación antes de enviar la señal SIGCONT (código 18).
+ 
+- La señal SIGCONT reanuda la ejecución de procesos detenidos mediante SIGSTOP o Ctrl+Z.
+ 
+- Si la señal se envía correctamente, se muestra un mensaje confirmando la acción; de lo contrario, se informa de un error.
+ 
 
 
