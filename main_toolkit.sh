@@ -11,7 +11,7 @@ while true; do
   echo -e "${CYAN}==================================================${NC}"
   echo -e "${CYAN}  Toolkit de Administración Jr. - Servidores ISPC ${NC}"
   echo -e "${CYAN}==================================================${NC}\n"
-  echo -e "¡Hola! Selecciona una opción para administrar los servidores:${NC}\n"
+  echo -e "¡Hola! Bienvenido al Toolkit de Administración:${NC}\n"
   echo "1) Gestión de Procesos"
   echo "2) Información de Memoria"
   echo "3) Información de Disco y Archivos"

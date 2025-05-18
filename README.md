@@ -1,7 +1,16 @@
-# toolkit-linux
-Sistemas Operativosss
+<h1 align="center"> 🛠️ Toolkit de Administración Jr. </h1>
+<div align="center">
+<img src="https://github.com/user-attachments/assets/27c1f99f-f9b7-4059-98ac-8f396863f6a2" alt="tools" width="600" height="400">
+</div>
 
-## 🧩 Scripts del Toolkit
+<br>
+<br>
+<br>
+Toolkit de Administración Jr. es una herramienta funcional basada en Bash, desarrollada para simplificar tareas básicas de administración en sistemas Linux (Ubuntu/Debian). Diseñada para ser utilizada por estudiantes, usuarios principiantes o administradores de sistemas en pequeñas startups o entornos educativos, este toolkit ofrece un menú interactivo y accesible desde la terminal que permite realizar tareas clave como monitoreo de procesos, análisis de recursos del sistema, gestión de usuarios, entre otras.
+
+El proyecto se construyó bajo una estructura modular, utilizando scripts individuales para cada funcionalidad, lo que facilita la lectura, mantenimiento y extensión futura del sistema.
+
+<h2 align="center"> 🧩 Scripts del Toolkit </h2>
 
 ### 📄 *ver_detalles_proceso.sh*
 
@@ -60,7 +69,8 @@ Si está instalado, lo ejecuta.
 Si no está instalado, ejecuta top como alternativa.
 
 Ambas herramientas permiten observar procesos, uso de CPU, memoria, y más en tiempo real.
-
+<br>
+<br>
 ### 📄 *validar_entrada.sh*
 
 Este script contiene funciones que pueden ser importadas por otros scripts para validar entradas del usuario, como por ejemplo si un PID es válido.
@@ -76,3 +86,119 @@ pid_existe(pid)
 Para usar estas funciones desde otro archivo, se debe importar el script con source:
 
 source ./validar_entrada.sh
+<br>
+<br>
+### 📄 *main.sh*
+
+Este es el script principal del toolkit. 
+
+🔍 Funcionamiento:
+
+Se encarga de presentar el menú general al usuario, desde donde se puede acceder a los distintos módulos del sistema:
+- Gestión de procesos
+- Información de memoria
+- Uso de disco y archivos
+- Administración de usuarios y grupos
+- Chequeos de seguridad
+- Salir
+
+Cada opción del menú ejecuta scripts independientes, ubicados en carpetas específicas dentro de <code>`modulos/`</code>. El menú permanece activo hasta que el usuario elige salir.
+<br>
+<br>
+### 📄 *procesos.sh*
+
+Este script representa el módulo de Gestión de Procesos, y es invocado desde <code>`main_toolkit.sh`</code>.
+
+🔍 Funcionamiento:
+
+Muestra un submenú específico con distintas opciones relacionadas al control y monitoreo de procesos en el sistema. Entre las funcionalidades que ofrece:
+
+Listar todos los procesos
+- Ver detalles por PID
+- Terminar procesos (suavemente o de forma forzada)
+- Suspender/reanudar procesos
+- Cambiar la prioridad (nice value)
+- Abrir el monitor en tiempo real (<code>`top`</code>)
+
+Cada funcionalidad se encuentra implementada en su propio archivo .<code>`.sh`</code>, y <code>`procesos.sh`</code> se encarga de invocarlos según la selección del usuario.
+<br>
+<br>
+### 📄 *listar_procesos_todos.sh*
+
+🔍 Funcionamiento:
+
+Este script implementa la función de mostrar todos los procesos en ejecución.
+<br>
+<br>
+
+- Utiliza el comando (<code>`ps aux`</code>) para mostrar la lista completa.
+- Muestra los resultados con formato y encabezado.
+- Incluye una opción para volver al submenú de procesos.
+- Brinda una interfaz amigable, clara y con mensajes informativos para el usuario.
+
+Este archivo es parte del módulo de procesos, ubicado típicamente en (<code>`modulos/procesos/`</code>).
+
+
+### 📄 Forzar_proceso.sh
+🔍 Funcionamiento:
+
+Al selecionar este script implementa la función de terminar un proceso de forma forzada.
+<br><br>
+
+- Utiliza el comando (<code>kill -9 <PID></code>) para enviar la señal SIGKILL al proceso indicado.
+
+- Elimina inmediatamente el proceso, sin darle oportunidad de liberar recursos.
+
+- Solicita al usuario que ingrese el PID del proceso a finalizar.
+
+- Brinda mensajes claros e informativos sobre el resultado de la acción.
+
+- Incluye opción para volver al submenú de procesos.
+
+
+### 📄 suspender_proceso.sh 💤
+🔍 Funcionamiento:
+
+Este script implementa la función de suspender un proceso temporalmente.
+<br><br>
+
+- Utiliza el comando (<code>kill -19 <PID></code>) para enviar la señal SIGSTOP.
+
+- El proceso queda detenido, pero puede reanudarse más tarde con kill -18 &lt;PID&gt;.
+
+- Solicita al usuario que ingrese el PID del proceso a suspender.
+
+- Informa al usuario si la suspensión fue exitosa o no.
+
+- Incluye opción para volver al submenú de procesos.
+
+- Este archivo es parte del módulo de procesos, ubicado típicamente en (<code>modulos/procesos/</code>).
+
+### 📄 reanudar_proceso.sh 💤
+🔍 Funcionamiento:
+
+- Esta función permite reanudar un proceso que ha sido pausado o suspendido.
+ 
+- Solicita al usuario que ingrese el PID (identificador del proceso) y pide confirmación antes de enviar la señal SIGCONT (código 18).
+ 
+- La señal SIGCONT reanuda la ejecución de procesos detenidos mediante SIGSTOP o Ctrl+Z.
+ 
+- Si la señal se envía correctamente, se muestra un mensaje confirmando la acción; de lo contrario, se informa de un error.
+ 
+<br>
+<br>
+
+<h2>⚙️ Requisitos de Ejecución</h2>
+
+Para ejecutar correctamente el Toolkit, se requiere lo siguiente:
+
+- Sistema operativo: Linux (preferentemente Ubuntu o Debian).
+- Bash Shell.
+- Permisos de ejecución para los scripts (`chmod +x nombre_script.sh`).
+- Paquete `dos2unix` instalado (si los scripts fueron editados desde Windows):
+  ```bash
+  sudo apt update && sudo apt install dos2unix -y
+
+**Convertir archivos si es necesario:**
+  ```bash
+dos2unix *.sh
