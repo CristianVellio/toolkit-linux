@@ -90,3 +90,43 @@ Este script implementa la función de mostrar todos los procesos en ejecución.
 - Brinda una interfaz amigable, clara y con mensajes informativos para el usuario.
 
 Este archivo es parte del módulo de procesos, ubicado típicamente en (<code>`modulos/procesos/`</code>).
+
+
+### 📄 Forzar_proceso.sh
+🔍 Funcionamiento:
+
+Al selecionar este script implementa la función de terminar un proceso de forma forzada.
+<br><br>
+
+- Utiliza el comando (<code>kill -9 <PID></code>) para enviar la señal SIGKILL al proceso indicado.
+
+- Elimina inmediatamente el proceso, sin darle oportunidad de liberar recursos.
+
+- Solicita al usuario que ingrese el PID del proceso a finalizar.
+
+- Brinda mensajes claros e informativos sobre el resultado de la acción.
+
+- Incluye opción para volver al submenú de procesos.
+
+
+### 📄 suspender_proceso.sh 💤
+🔍 Funcionamiento:
+
+Este script implementa la función de suspender un proceso temporalmente.
+<br><br>
+
+- Utiliza el comando (<code>kill -19 <PID></code>) para enviar la señal SIGSTOP.
+
+- El proceso queda detenido, pero puede reanudarse más tarde con kill -18 &lt;PID&gt;.
+
+- Solicita al usuario que ingrese el PID del proceso a suspender.
+
+- Informa al usuario si la suspensión fue exitosa o no.
+
+- Incluye opción para volver al submenú de procesos.
+
+- Este archivo es parte del módulo de procesos, ubicado típicamente en (<code>modulos/procesos/</code>).
+
+
+
+
