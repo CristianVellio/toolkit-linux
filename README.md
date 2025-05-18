@@ -1,4 +1,9 @@
 <h1 align="center"> 🛠️ Toolkit de Administración Jr. </h1>
+<div align="center">
+<img src="https://github.com/user-attachments/assets/27c1f99f-f9b7-4059-98ac-8f396863f6a2" alt="tools" width="600" height="400">
+</div>
+
+<br>
 <br>
 <br>
 Toolkit de Administración Jr. es una herramienta funcional basada en Bash, desarrollada para simplificar tareas básicas de administración en sistemas Linux (Ubuntu/Debian). Diseñada para ser utilizada por estudiantes, usuarios principiantes o administradores de sistemas en pequeñas startups o entornos educativos, este toolkit ofrece un menú interactivo y accesible desde la terminal que permite realizar tareas clave como monitoreo de procesos, análisis de recursos del sistema, gestión de usuarios, entre otras.
@@ -138,5 +143,20 @@ Este script implementa la función de suspender un proceso temporalmente.
  
 - Si la señal se envía correctamente, se muestra un mensaje confirmando la acción; de lo contrario, se informa de un error.
  
+<br>
+<br>
 
+<h2>⚙️ Requisitos de Ejecución</h2>
 
+Para ejecutar correctamente el Toolkit, se requiere lo siguiente:
+
+- Sistema operativo: Linux (preferentemente Ubuntu o Debian).
+- Bash Shell.
+- Permisos de ejecución para los scripts (`chmod +x nombre_script.sh`).
+- Paquete `dos2unix` instalado (si los scripts fueron editados desde Windows):
+  ```bash
+  sudo apt update && sudo apt install dos2unix -y
+
+**Convertir archivos si es necesario:**
+  ```bash
+dos2unix *.sh
