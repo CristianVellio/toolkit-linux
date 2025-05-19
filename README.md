@@ -190,6 +190,20 @@ source ./validar_entrada.sh
 <br>
 <br>
 
+### 📄 *cambiar_prioridad_proceso.sh*
+
+Este script permite modificar la prioridad de ejecución de un proceso específico utilizando el comando "renice".
+La prioridad puede establecerse con un rango de **-20** (mayor prioridad) a **19** (menor prioridad), siempre que el usuario cuente con los permisos necesarios.
+
+🔍 Funcionamiento:
+
+1. Solicita al usuario el **PID** del proceso que desea modificar.
+2. Solicita el nuevo valor de **prioridad** (nice).
+3. Ejecuta el comando `renice` con los valores ingresados para cambiar la prioridad del proceso.
+
+⚠️ **Importante:**  
+Modificar la prioridad de procesos puede requerir privilegios elevados (por ejemplo, `sudo`) si el proceso no pertenece al usuario actual.
+
 
 <h2>⚙️ Requisitos de Ejecución</h2>
 
