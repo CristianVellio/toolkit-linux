@@ -1,16 +1,26 @@
 #!/bin/bash
 
-# Se verifica si el archivo /proc/meminfo existe antes de intentar la lectura
-if [ -f "/proc/meminfo" ]; then
-   # Si el archivo existe, se procede a leer las primeras líneas
-   # El comando 'head' muestra por defecto las primeras 10 líneas.
-   # En el caso de querer ver más o menos líneas, se puede utilizar 'head -n X /proc/meminfo'
-   echo "Mostrar las primeras líneas de /proc/meminfo:"
-   head /proc/meminfo
-else
-   # Si el archivo no existe, se muestra un mensaje de error.
-   echo "Error: El archivo /proc/meminfo no se encontró."
-fi
+mostrar_memoria_virtual () {
+    echo "--- Información Detallada de Memoria Virtual ---"
 
-exit 0 #Se sale del script con un código de éxito (0).
+    # 1. Se verifica que el comando 'head' está disponible en el sistema.
+    if ! command -v head &> /dev/null; then
+        echo "Error: El comando 'head' no se encontró. Es necesario para leer el archivo de memoria."
+        return 1 # Devuelve un código de error.
+    fi
+
+    # 2. Se verifica la existencia del archivo /proc/meminfo.
+    if [ ! -f "/proc/meminfo" ]; then
+        echo "Error: El archivo /proc/meminfo no se encontró."
+        echo "Este archivo es necesario para obtener estadísticas de memoria."
+        return 1 # Devuelve un código de error.
+    fi
+
+    # 3. Se muestra la información de memoria virtual.
+    echo "Aquí se muestran las primeras líneas, incluyendo Swap (memoria virtual):"
+    head /proc/meminfo | grep -E 'Mem|Buffer|Cached|Swap'
+
+    echo "------------------------------------------------"
+    return 0 # Devuelve 0 para indicar que la función se ejecutó con éxito.
+}
 
