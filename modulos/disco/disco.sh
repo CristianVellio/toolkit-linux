@@ -18,7 +18,7 @@ while true; do
   read -rp "Ingresa el número de tu opción: " opcion
 
   case $opcion in
-    1) ./modulos/disco/???.sh ;;
+    1) ./modulos/disco/espacio_disco.sh ;;
     2) ./modulos/disco/???.sh ;;
     3) ./modulos/disco/???.sh ;;
     4) ./modulos/disco/???.sh ;;
