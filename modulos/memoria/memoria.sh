@@ -23,7 +23,6 @@ while true; do
     1) ./modulos/memoria/???.sh ;;
     2) ./modulos/memoria/???.sh ;;
     3) ./modulos/memoria/???.sh ;;
-    4) ./modulos/memoria/???.sh ;;
     4) break ;;
     *) echo -e "${RED}Opción inválida. Intenta nuevamente.${NC}"; sleep 2 ;;
   esac

@@ -3,7 +3,7 @@
 while true; do
     clear
     echo "===== TOOLKIT DE ADMINISTRACIÓN JR ====="
-    echo "1) Monitorear procesos (top/htop)"
+    echo "1) Monitorear procesos (top/htop)(q para salir)"
     echo "2) Salir"
     echo "========================================"
     read -p "Seleccione una opción: " opcion

@@ -33,6 +33,7 @@ suspender_proceso() {
 }
 
 
- suspender_proceso
+ suspender_proceso "$@"
+ 
 
 
