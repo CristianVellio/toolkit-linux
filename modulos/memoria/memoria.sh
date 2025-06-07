@@ -20,7 +20,7 @@ while true; do
   read -rp "Ingresa el número de tu opción: " opcion
 
   case $opcion in
-    1) ./modulos/memoria/???.sh ;;
+    1) ./modulos/memoria/UsoRam.sh ;;
     2) ./modulos/memoria/???.sh ;;
     3) ./modulos/memoria/???.sh ;;
     4) ./modulos/memoria/???.sh ;;
