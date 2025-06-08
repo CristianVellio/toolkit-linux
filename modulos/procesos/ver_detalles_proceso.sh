@@ -19,6 +19,7 @@ ejecutar_ver_detalles_proceso() {
 
 # Llamada a la función principal si el script se ejecuta directamente
 ejecutar_ver_detalles_proceso "$@"
+read -p "Presiona ENTER para volver al menu anterior.."
 
 ## Explicación de la función ver_detalles_proceso()
 #Esta función le solicita al usuario que ingrese el PID (Número de Identificación del Proceso)

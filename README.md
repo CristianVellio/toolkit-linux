@@ -211,6 +211,14 @@ Para ejecutar correctamente el Toolkit, se requiere lo siguiente:
 
 - Sistema operativo: Linux (preferentemente Ubuntu o Debian).
 - Bash Shell.
+  
+<h3>Metodo 1:</h3>
+
+1. Posicionarse en la carpeta donde esta ubicada la aplicacion
+2. Utilizar el comando 'chmod -R a+rwx .' para darle permiso recursivo a toda la carpeta
+   
+<h3>Metodo 2:</h3>
+
 - Permisos de ejecución para los scripts (`chmod +x nombre_script.sh`).
 - Paquete `dos2unix` instalado (si los scripts fueron editados desde Windows):
   ```bash
@@ -218,5 +226,4 @@ Para ejecutar correctamente el Toolkit, se requiere lo siguiente:
 
 **Convertir archivos si es necesario:**
   ```bash
-dos2unix *.sh
-
+dos2unix *.sh 

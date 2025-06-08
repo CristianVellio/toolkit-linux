@@ -22,7 +22,7 @@ while true; do
   case $opcion in
     1) ./modulos/memoria/UsoRam.sh ;;
     2) ./modulos/memoria/???.sh ;;
-    3) ./modulos/memoria/???.sh ;;
+    3) ./modulos/memoria/vmstat.sh ;;
     4) break ;;
     *) echo -e "${RED}Opción inválida. Intenta nuevamente.${NC}"; sleep 2 ;;
   esac
