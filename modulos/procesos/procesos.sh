@@ -28,7 +28,7 @@ while true; do
     1) ./modulos/procesos/listar_procesos_todos.sh ;;
     2) ./modulos/procesos/ver_detalles_proceso.sh ;;
     3) ./modulos/procesos/terminar_proceso_suave.sh ;;
-    4) ./modulos/procesos/forzar_proceso.sh ;;
+    4) ./modulos/procesos/terminar_proceso_forzado.sh ;;
     5) ./modulos/procesos/suspender_proceso.sh ;;
     6) ./modulos/procesos/reanudar_proceso.sh ;;
     7) ./modulos/procesos/cambiar_prioridad_proceso.sh ;;
