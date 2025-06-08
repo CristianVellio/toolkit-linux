@@ -11,6 +11,7 @@ cambiar_prioridad(){
 
 	# Usamos el comadno renicie
 	renice "$prioridad" -p "$pid"
+	read -p "Presione ENTER para continuar.."
 }
 
 #Llamado a la funcion

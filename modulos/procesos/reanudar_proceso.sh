@@ -9,6 +9,7 @@ ejecutar() {
             kill -18 "$pid"
             if [ $? -eq 0 ]; then
                 echo "Señal SIGCONT enviada al proceso $pid."
+                read -p "Presione ENTER para continuar.."
             else
                 echo "Error al enviar la señal al proceso $pid."
             fi
