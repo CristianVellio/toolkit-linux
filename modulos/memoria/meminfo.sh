@@ -22,7 +22,11 @@ mostrar_memoria_virtual () {
 
     echo "------------------------------------------------"
     return 0 # Devuelve 0 para indicar que la función se ejecutó con éxito.
+ 
 }
+
+
+
 # Se llama a la función para que se ejecute
 mostrar_memoria_virtual 
 
