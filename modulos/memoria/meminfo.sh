@@ -29,7 +29,7 @@ mostrar_memoria_virtual () {
 
 # Se llama a la función para que se ejecute
 mostrar_memoria_virtual 
-
+read -p "Presione ENTER para volver al menú."
 
 #Explicación de la función mostrar_memoria_virtual():
 #La funcionalidad muestra un breve informe del uso de memoria, el cual ejecuta las siguientes instancias:
@@ -37,3 +37,4 @@ mostrar_memoria_virtual
 # -El script se asegura de contar con el archivo donde se guardan los detalles de la memoria. Si no es encontrado, se mostrara un mensaje de error.
 #2- Si el archivo es encontrado se realiza una búsqueda y filtrado donde se muestran solo las líneas más importantes. #Principalmente cuánta RAM (memoria rápida) y cuánta memoria virtual (Swap) está se esta utilizando en el sistema.
 #3- Se muestran en pantalla los resultados del estado de la memoria.
+
