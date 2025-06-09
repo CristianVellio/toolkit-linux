@@ -1,40 +1,56 @@
 #!/bin/bash
 
-mostrar_memoria_virtual () {
-    echo "--- Información Detallada de Memoria Virtual ---"
+# meminfo.sh - Mostrar información detallada del sistema de memoria desde /proc/meminfo
 
-    # 1. Se verifica que el comando 'head' está disponible en el sistema.
-    if ! command -v head &> /dev/null; then
-        echo "Error: El comando 'head' no se encontró. Es necesario para leer el archivo de memoria."
-        return 1 # Devuelve un código de error.
-    fi
-
-    # 2. Se verifica la existencia del archivo /proc/meminfo.
-    if [ ! -f "/proc/meminfo" ]; then
-        echo "Error: El archivo /proc/meminfo no se encontró."
-        echo "Este archivo es necesario para obtener estadísticas de memoria."
-        return 1 # Devuelve un código de error.
-    fi
-
-    # 3. Se muestra la información de memoria virtual.
-    echo "Aquí se muestran las primeras líneas, incluyendo Swap (memoria virtual):"
-    head /proc/meminfo | grep -E 'Mem|Buffer|Cached|Swap'
-
-    echo "------------------------------------------------"
-    return 0 # Devuelve 0 para indicar que la función se ejecutó con éxito.
- 
+# Función para mostrar encabezado
+mostrar_encabezado() {
+    clear # Limpia la pantalla
+    echo "==========================================="
+    echo "  Información Detallada de /proc/meminfo  "
+    echo "==========================================="
+    echo ""
 }
 
+# Función para verificar la existencia del archivo /proc/meminfo
+verificar_meminfo_archivo() {
+    if [ ! -f "/proc/meminfo" ]; then
+        mostrar_encabezado # Limpiar pantalla antes del error
+        echo "Error: El archivo /proc/meminfo no se encontró."
+        echo "Este archivo es esencial para obtener estadísticas detalladas de memoria."
+        echo ""
+        echo "Presiona Enter para salir..."
+        read -r
+        exit 1 # Sale con un código de error
+    fi
+}
+
+# Llama a la función de verificación al inicio
+verificar_meminfo_archivo
+
+# Muestra el encabezado
+mostrar_encabezado
+
+# Muestra el contenido completo del archivo /proc/meminfo
+echo "A continuación, se muestra el contenido completo de /proc/meminfo:"
+echo "--------------------------------------------------------"
+cat /proc/meminfo
+
+echo ""
+echo "--------------------------------------------------------"
+echo ""
+echo "Presiona Enter para volver al menú de Memoria..."
+read -r
+
+exit 0 # Salida exitosa del script
 
 
-# Se llama a la función para que se ejecute
-mostrar_memoria_virtual 
-read -p "Presione ENTER para volver al menú."
+# Explicación de la funcionalidad del script 'meminfo.sh':
+# Este script muestra información detallada de la memoria virtual del sistema,
+# obtenida directamente del archivo '/proc/meminfo'.
 
-#Explicación de la función mostrar_memoria_virtual():
-#La funcionalidad muestra un breve informe del uso de memoria, el cual ejecuta las siguientes instancias:
-
-# -El script se asegura de contar con el archivo donde se guardan los detalles de la memoria. Si no es encontrado, se mostrara un mensaje de error.
-#2- Si el archivo es encontrado se realiza una búsqueda y filtrado donde se muestran solo las líneas más importantes. #Principalmente cuánta RAM (memoria rápida) y cuánta memoria virtual (Swap) está se esta utilizando en el sistema.
-#3- Se muestran en pantalla los resultados del estado de la memoria.
-
+# Su funcionamiento es el siguiente:
+# 1. Verifica la existencia de '/proc/meminfo'. Si no lo encuentra, muestra un error y sale.
+# 2. Si el archivo existe, limpia la pantalla y muestra todo su contenido,
+#    proporcionando datos exhaustivos sobre RAM y SWAP.
+# 3. Pausa la ejecución al finalizar, permitiendo al usuario revisar la información
+#    antes de regresar al menú principal.
