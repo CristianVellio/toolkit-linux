@@ -19,7 +19,7 @@ while true; do
 
   case $opcion in
     1) ./modulos/disco/espacio_disco.sh ;;
-    2) ./modulos/disco/???.sh ;;
+    2) ./modulos/disco/tamaño.sh ;;
     3) ./modulos/disco/listar_archivos.sh ;;
     4) break ;;
     *) echo -e "${RED}Opción inválida. Intenta nuevamente.${NC}"; sleep 2 ;;
