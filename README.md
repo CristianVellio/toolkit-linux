@@ -218,8 +218,31 @@ COMPLETAR
 COMPLETAR
 
 ### 📄 *vmstat.sh*
+Este script proporciona un menú interactivo para visualizar estadísticas del sistema relacionadas con memoria, procesos y disco utilizando el comando vmstat. Está pensado como una herramienta accesible para usuarios que desean obtener información clave del sistema sin memorizar comandos.
 
-COMPLETAR
+🔍 Funcionamiento:
+
+Al ejecutarlo, se muestra un menú con las siguientes opciones:
+
+1_Ver resumen del sistema (vmstat -s)
+Incluye análisis del uso de la memoria swap con advertencias si se detecta uso elevado.
+
+2_Ver actividad en tiempo real (vmstat 1 5)
+Muestra 5 muestras de estadísticas con intervalos de 1 segundo.
+
+3_Ver estadísticas de disco (vmstat -d)
+
+4_Ver paginación del disco sda (vmstat -p sda)
+
+5_Ver memoria activa/inactiva (vmstat -a)
+
+6_Ver número de procesos creados desde el arranque (vmstat -f)
+
+7_Volver al menú anterior o salir
+
+🛠️ Requisitos:
+
+El comando vmstat debe estar instalado
 
 ### 📄 *disco.sh*
 
