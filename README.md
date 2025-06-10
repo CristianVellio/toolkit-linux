@@ -205,6 +205,34 @@ La prioridad puede establecerse con un rango de **-20** (mayor prioridad) a **19
 Modificar la prioridad de procesos puede requerir privilegios elevados (por ejemplo, `sudo`) si el proceso no pertenece al usuario actual.
 
 
+### 📄 *memoria.sh*
+
+COMPLETAR
+
+### 📄 *UsoRam.sh*
+
+COMPLETAR
+
+### 📄 *meminfo.sh*
+
+COMPLETAR
+
+### 📄 *vmstat.sh*
+
+COMPLETAR
+
+### 📄 *disco.sh*
+
+COMPLETAR
+
+### 📄 *especio_disco.sh*
+
+COMPLETAR
+
+### 📄 *listar_archivos.sh*
+
+COMPLETAR
+
 
 ### 📄 *tamaño.sh*
 
