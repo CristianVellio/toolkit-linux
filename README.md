@@ -205,6 +205,23 @@ La prioridad puede establecerse con un rango de **-20** (mayor prioridad) a **19
 Modificar la prioridad de procesos puede requerir privilegios elevados (por ejemplo, `sudo`) si el proceso no pertenece al usuario actual.
 
 
+
+### 📄 *tamaño.sh*
+
+
+🔍  Función calcular_tamaño()
+ 
+  Esta función permite al usuario calcular el tamaño total de un archivo o directorio específico. Utiliza el comando 'du -sh <ruta>', donde:
+
+  -s muestra solo el total, sin desglosar subdirectorios
+ 
+  -h presenta el resultado en un formato legible (KB, MB, GB, etc.)
+ 
+   Primero verifica si la ruta ingresada existe, luego solicita confirmación, y finalmente muestra el tamaño total si se confirma la operación.
+
+
+
+
 <h2>⚙️ Requisitos de Ejecución</h2>
 
 Para ejecutar correctamente el Toolkit, se requiere lo siguiente:
@@ -227,3 +244,5 @@ Para ejecutar correctamente el Toolkit, se requiere lo siguiente:
 **Convertir archivos si es necesario:**
   ```bash
 dos2unix *.sh 
+
+
