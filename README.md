@@ -231,7 +231,43 @@ COMPLETAR
 
 ### 📄 *listar_archivos.sh*
 
-COMPLETAR
+Este script permite listar archivos y directorios del sistema de forma interactiva desde la terminal. 
+
+🔧 ¿Qué hace?
+Ofrece un menú interactivo para:
+
+Elegir un directorio (actual, /home, /root, personalizado, o todo el sistema).
+
+Elegir el tipo de listado (simple, completo, recursivo).
+
+Ver los resultados con ls, adaptado a la opción elegida.
+
+
+📜 Estructura del Menú
+
+El usuario puede elegir entre:
+
+  Directorio actual (.)
+
+  Directorio /home
+
+  Directorio /root
+
+  Ingresar una ruta manual
+
+  Listar todo el sistema (/)
+
+  Salir al menú anterior
+
+Seleccionar Tipo de Listado
+
+  ls: listado simple
+
+  ls -l: listado con detalles (permisos, tamaño, etc.)
+
+  ls -R: listado recursivo
+
+  ls -lR: listado completo y recursivo
 
 
 ### 📄 *tamaño.sh*
