@@ -9,7 +9,9 @@
 Toolkit de Administración Jr. es una herramienta funcional basada en Bash, desarrollada para simplificar tareas básicas de administración en sistemas Linux (Ubuntu/Debian). Diseñada para ser utilizada por estudiantes, usuarios principiantes o administradores de sistemas en pequeñas startups o entornos educativos, este toolkit ofrece un menú interactivo y accesible desde la terminal que permite realizar tareas clave como monitoreo de procesos, análisis de recursos del sistema, gestión de usuarios, entre otras.
 
 El proyecto se construyó bajo una estructura modular, utilizando scripts individuales para cada funcionalidad, lo que facilita la lectura, mantenimiento y extensión futura del sistema.
-
+<br>
+<br>
+<br>
 <h2 align="center"> 🧩 Scripts del Toolkit </h2>
 
 ### 📄 *main.sh*
@@ -29,6 +31,9 @@ Se encarga de presentar el menú general al usuario, desde donde se puede accede
 Cada opción del menú ejecuta scripts independientes, ubicados en carpetas específicas dentro de <code>`modulos/`</code>. El menú permanece activo hasta que el usuario elige salir.
 <br>
 <br>
+<br>
+<h2 align="center"> 🧩 Scripts de Procesos </h2>
+
 ### 📄 *procesos.sh*
 
 Este script representa el módulo de Gestión de Procesos, y es invocado desde <code>`main_toolkit.sh`</code>.
@@ -203,7 +208,11 @@ La prioridad puede establecerse con un rango de **-20** (mayor prioridad) a **19
 
 ⚠️ **Importante:**  
 Modificar la prioridad de procesos puede requerir privilegios elevados (por ejemplo, `sudo`) si el proceso no pertenece al usuario actual.
+<br>
+<br>
+<br>
 
+<h2 align="center"> 🧩 Scripts de Memoria </h2>
 
 ### 📄 *memoria.sh*
 
@@ -243,6 +252,11 @@ Muestra 5 muestras de estadísticas con intervalos de 1 segundo.
 🛠️ Requisitos:
 
 El comando vmstat debe estar instalado
+<br>
+<br>
+<br>
+
+<h2 align="center"> 🧩 Scripts de Disco </h2>
 
 ### 📄 *disco.sh*
 
@@ -356,9 +370,11 @@ Seleccionar Tipo de Listado
    Primero verifica si la ruta ingresada existe, luego solicita confirmación, y finalmente muestra el tamaño total si se confirma la operación.
 
 
+<br>
+<br>
+<br>
 
-
-<h2>⚙️ Requisitos de Ejecución</h2>
+<h2 align="center">⚙️ Requisitos de Ejecución</h2>
 
 Para ejecutar correctamente el Toolkit, se requiere lo siguiente:
 
