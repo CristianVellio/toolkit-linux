@@ -246,11 +246,60 @@ El comando vmstat debe estar instalado
 
 ### 📄 *disco.sh*
 
-COMPLETAR
+Este script implementa el módulo de uso de disco y archivos del Toolkit de Administración Jr. Su objetivo es brindar a los usuarios una forma sencilla de obtener información clave relacionada con el uso del sistema de archivos.
+
+🔍 Funcionamiento:
+
+Al ejecutar `disco.sh`, se despliega un submenú interactivo con opciones para:
+
+Ver espacio libre/usado en discos montados
+Invoca el script `espacio_disco.sh`.
+
+Calcular el tamaño de un archivo o directorio
+Ejecuta el script `tamaño.sh`.
+
+Listar archivos de un directorio
+Llama a `listar_archivos.sh`.
+
+Volver al menú principal
+Finaliza la ejecución del submenú y devuelve el control a `main_toolkit.sh`.
+
+🔁 El menú permanece activo hasta que el usuario elige la opción de volver.
+
+💡 Este módulo está pensado para facilitar la gestión de espacio en disco, especialmente útil para verificar informacion sobre uso de particiones o limpiar archivos innecesarios.
 
 ### 📄 *especio_disco.sh*
 
-COMPLETAR
+Este script muestra un informe claro y visual del espacio en disco utilizado por las particiones montadas en el sistema.
+
+🔍 Funcionamiento:
+
+Utiliza el comando:
+
+```bash
+df -h --output=source,size,used,avail,pcent,target
+```
+
+Este comando muestra:
+
+  - Sistema de archivos (`source`)
+
+  - Tamaño total
+
+  - Espacio usado
+
+  - Espacio disponible
+
+  - Porcentaje de uso
+
+  - Punto de montaje
+
+ Se omite la primera línea del encabezado con `tail -n +2` para mostrar solo los datos relevantes al usuario.
+
+ Al finalizar, se espera que el usuario presione Enter para volver al submenú, evitando que la información desaparezca inmediatamente.
+
+🎯 Objetivo:
+Brindar una vista rápida del estado de almacenamiento en el sistema, muy útil para monitorear particiones llenas o identificar problemas de espacio antes de instalar software, hacer backups o guardar grandes volúmenes de datos.
 
 ### 📄 *listar_archivos.sh*
 
