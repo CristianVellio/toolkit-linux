@@ -67,7 +67,8 @@ Este script implementa la función de mostrar todos los procesos en ejecución.
 - Brinda una interfaz amigable, clara y con mensajes informativos para el usuario.
 
 Este archivo es parte del módulo de procesos, ubicado típicamente en (<code>`modulos/procesos/`</code>).
-
+<br>
+<br>
 
 ### 📄 *ver_detalles_proceso.sh*
 
@@ -92,7 +93,8 @@ Una vez que el usuario introduce el PID y presiona Enter, el script utiliza el c
 - COMMAND: El comando que se ejecutó para iniciar el proceso.
 
 Si el PID ingresado no corresponde a ningún proceso activo en el sistema, el script mostrará un mensaje indicando que no se encontró ningún proceso con ese PID.
-
+<br>
+<br>
 
 ### 📄 *terminar_proceso_suave.sh*
 
@@ -109,7 +111,8 @@ Si el usuario confirma, el script utiliza el comando kill <PID> (que por defecto
 Después de intentar enviar la señal, el script mostrará un mensaje indicando si la señal se envió correctamente. Sin embargo, es importante tener en cuenta que el script solo envía la señal; el proceso en sí decide si y cómo responder a ella. Algunos procesos pueden ignorar esta señal.
 
 Importante: Utilizar la terminación suave es la forma recomendada de finalizar un proceso, ya que le permite realizar una limpieza antes de cerrarse. Solo en casos donde un proceso no responde a SIGTERM se debería considerar el uso de la terminación forzada (kill -9), la cual tus compañeros implementarán.
-
+<br>
+<br>
 
 ### 📄 terminar_proceso_forzado.sh
 🔍 Funcionamiento:
@@ -126,7 +129,8 @@ Al selecionar este script implementa la función de terminar un proceso de forma
 - Brinda mensajes claros e informativos sobre el resultado de la acción.
 
 - Incluye opción para volver al submenú de procesos.
-
+<br>
+<br>
 
 ### 📄 suspender_proceso.sh 💤
 🔍 Funcionamiento:
@@ -145,7 +149,8 @@ Este script implementa la función de suspender un proceso temporalmente.
 - Incluye opción para volver al submenú de procesos.
 
 - Este archivo es parte del módulo de procesos, ubicado típicamente en (<code>modulos/procesos/</code>).
-
+<br>
+<br>
 
 ### 📄 reanudar_proceso.sh 💤
 🔍 Funcionamiento:
@@ -157,7 +162,8 @@ Este script implementa la función de suspender un proceso temporalmente.
 - La señal SIGCONT reanuda la ejecución de procesos detenidos mediante SIGSTOP o Ctrl+Z.
  
 - Si la señal se envía correctamente, se muestra un mensaje confirmando la acción; de lo contrario, se informa de un error.
-
+<br>
+<br>
 
 ### 📄 *abrir_monitor_procesos.sh*
 
@@ -217,14 +223,18 @@ Modificar la prioridad de procesos puede requerir privilegios elevados (por ejem
 ### 📄 *memoria.sh*
 
 COMPLETAR
-
+<br>
+<br>
 ### 📄 *UsoRam.sh*
 
 COMPLETAR
-
+<br>
+<br>
 ### 📄 *meminfo.sh*
 
 COMPLETAR
+<br>
+<br>
 
 ### 📄 *vmstat.sh*
 Este script proporciona un menú interactivo para visualizar estadísticas del sistema relacionadas con memoria, procesos y disco utilizando el comando vmstat. Está pensado como una herramienta accesible para usuarios que desean obtener información clave del sistema sin memorizar comandos.
@@ -281,6 +291,8 @@ Finaliza la ejecución del submenú y devuelve el control a `main_toolkit.sh`.
 🔁 El menú permanece activo hasta que el usuario elige la opción de volver.
 
 💡 Este módulo está pensado para facilitar la gestión de espacio en disco, especialmente útil para verificar informacion sobre uso de particiones o limpiar archivos innecesarios.
+<br>
+<br>
 
 ### 📄 *especio_disco.sh*
 
@@ -314,6 +326,8 @@ Este comando muestra:
 
 🎯 Objetivo:
 Brindar una vista rápida del estado de almacenamiento en el sistema, muy útil para monitorear particiones llenas o identificar problemas de espacio antes de instalar software, hacer backups o guardar grandes volúmenes de datos.
+<br>
+<br>
 
 ### 📄 *listar_archivos.sh*
 
@@ -354,7 +368,8 @@ Seleccionar Tipo de Listado
   ls -R: listado recursivo
 
   ls -lR: listado completo y recursivo
-
+<br>
+<br>
 
 ### 📄 *tamaño.sh*
 
