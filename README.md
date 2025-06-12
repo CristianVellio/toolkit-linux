@@ -226,8 +226,18 @@ COMPLETAR
 <br>
 <br>
 ### 📄 *UsoRam.sh*
+Este script permite visualizar el uso actual de la memoria RAM y la memoria SWAP del sistema (memoria virtual) , utilizando el comando free -h con una interfaz simple y legible para el usuario.
 
-COMPLETAR
+🔍 Funcionamiento:
+
+- Limpia la pantalla para una mejor visualización.
+
+- Muestra un título con formato en color cian.
+
+- Ejecuta el comando free -h para mostrar el uso actual de la RAM y SWAP en un formato legible (por ejemplo, MB o GB).
+
+- Espera que el usuario presione Enter para regresar al menú u otra sección del script.
+
 <br>
 <br>
 ### 📄 *meminfo.sh*
