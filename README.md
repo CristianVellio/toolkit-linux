@@ -240,11 +240,6 @@ Este script permite visualizar el uso actual de la memoria RAM y la memoria SWAP
 
 <br>
 <br>
-### 📄 *meminfo.sh*
-
-COMPLETAR
-<br>
-<br>
 
 ### 📄 *vmstat.sh*
 Este script proporciona un menú interactivo para visualizar estadísticas del sistema relacionadas con memoria, procesos y disco utilizando el comando vmstat. Está pensado como una herramienta accesible para usuarios que desean obtener información clave del sistema sin memorizar comandos.
