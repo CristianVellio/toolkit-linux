@@ -283,6 +283,24 @@ El comando vmstat debe estar instalado
 <br>
 <br>
 
+📄 meminfo.sh
+Este script forma parte del módulo de Gestión de Memoria, y es ejecutado desde memoria.sh.
+
+🔍 Funcionamiento:
+
+meminfo.sh permite consultar de forma directa y completa el contenido del archivo del sistema /proc/meminfo, el cual proporciona información detallada sobre la memoria virtual del sistema.
+
+Entre sus características se incluyen:
+
+Verificación previa de la existencia del archivo /proc/meminfo
+
+Visualización clara y ordenada del contenido completo del archivo
+
+Encabezado informativo y pausa final para revisión antes de volver al menú
+
+📌 Objetivo:
+Brindar una vista detallada de estadísticas como memoria libre, buffers, cachés, y uso de SWAP, útil para diagnóstico o monitoreo del estado de la memoria del sistema.
+
 <h2 align="center"> 🧩 Scripts de Disco </h2>
 
 ### 📄 *disco.sh*
