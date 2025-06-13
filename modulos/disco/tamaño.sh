@@ -20,9 +20,10 @@ calcular_tamaño() {
     fi
 }
 
+
 # Llamada a la función principal si el script se ejecuta directamente
 calcular_tamaño "$@"
-
+read -p "Presione ENTER para continuar.."
 ## Explicación de la función calcular_tamaño()
 # Esta función permite al usuario calcular el tamaño total de un archivo
 # o directorio específico. Utiliza el comando 'du -sh <ruta>', donde:
