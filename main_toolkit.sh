@@ -15,9 +15,7 @@ while true; do
   echo "1) Gestión de Procesos"
   echo "2) Información de Memoria"
   echo "3) Información de Disco y Archivos"
-  echo "4) Administración de Usuarios y Grupos"
-  echo "5) Chequeos de Seguridad Básica"
-  echo "6) Salir"
+  echo "4) Salir"
   echo "----------------------------------------------"
   read -rp "Ingresa el número de tu opción: " opcion
 
@@ -32,12 +30,6 @@ while true; do
       bash ./modulos/disco/disco.sh
       ;;
     4)
-      bash ./modulos/usuarios/usuarios.sh
-      ;;
-    5)
-      bash ./modulos/seguridad/seguridad.sh
-      ;;
-    6)
       echo -e "${GREEN}Gracias por usar el Toolkit. ¡Hasta luego!${NC}"
       exit 0
       ;;
