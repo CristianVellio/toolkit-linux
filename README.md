@@ -221,18 +221,17 @@ Modificar la prioridad de procesos puede requerir privilegios elevados (por ejem
 <h2 align="center"> 🧩 Scripts de Memoria </h2>
 
 ### 📄 *memoria.sh*
-📄 memoria.sh
 Este script representa el módulo de Gestión de Memoria, y es invocado desde main_toolkit.sh.
 
 🔍 Funcionamiento:
 
 Muestra un submenú específico con distintas opciones relacionadas al monitoreo del uso de memoria del sistema. Las funcionalidades disponibles incluyen:
 
-_Ver el uso actual de RAM y SWAP
+- Ver el uso actual de RAM y SWAP
 
-_Consultar un resumen de /proc/meminfo
+- Consultar un resumen de /proc/meminfo
 
-_Obtener estadísticas de procesos y uso de memoria con vmstat
+- Obtener estadísticas de procesos y uso de memoria con vmstat
 
 Cada funcionalidad está implementada en su propio archivo .sh dentro del directorio modulos/memoria/, y memoria.sh se encarga de invocarlos según la selección del usuario.
 
