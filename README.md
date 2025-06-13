@@ -283,7 +283,8 @@ El comando vmstat debe estar instalado
 <br>
 <br>
 
-📄 meminfo.sh
+### 📄 *meminfo.sh*
+
 Este script forma parte del módulo de Gestión de Memoria, y es ejecutado desde memoria.sh.
 
 🔍 Funcionamiento:
