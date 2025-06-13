@@ -237,6 +237,8 @@ Cada funcionalidad está implementada en su propio archivo .sh dentro del direct
 
 <br>
 <br>
+
+
 ### 📄 *UsoRam.sh*
 Este script permite visualizar el uso actual de la memoria RAM y la memoria SWAP del sistema (memoria virtual) , utilizando el comando free -h con una interfaz simple y legible para el usuario.
 
